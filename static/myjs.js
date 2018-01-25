@@ -24,9 +24,15 @@ function decode(data) {
     
         if(data != "") {
         data = decode(data);
-        // console.log(data);
-        data = JSON.parse(data);}
-        // console.log("ddsj");
+        //console.log(data);
+        //console.log(typeof(data));
+        var data2=data.substr(1,data.length-2);
+        //console.log(data2);
+        data = JSON.parse(data2);
+        //console.log(typeof(data));
+        
+        }
+        //console.log("ddsj");
        
         // console.log(up_val,down_val);
         if(data[0].up_or_down==1)// up route
@@ -60,7 +66,7 @@ function decode(data) {
               var latlngs = [[data[k].latitude,data[k].longitude],[data[k-1].latitude,data[k-1].longitude]];
                           // console.log(data[k].latitude,data[k].longitude,data[k].speed_google, latlngs);
               // console.log(data[k-1].dist);
-              console.log(data[k-1].speed_google);
+              //console.log(data[k-1].speed_google);
               var polyline = L.polyline(latlngs, {color: color_display(data[k].diff,data[k-1].dist*16/data[k-1].speed_google), weight: 6}).addTo(mymap);
 
               
@@ -105,7 +111,7 @@ function decode(data) {
               var latlngs = [[data[k].latitude,data[k].longitude],[data[k+1].latitude,data[k+1].longitude]];
                           // console.log(data[k].latitude,data[k].longitude,data[k].speed_google, latlngs);
               // console.log(data[k-1].dist);
-              console.log(data[k+1].diff);
+              //console.log(data[k+1].diff);
               var polyline = L.polyline(latlngs, {color: color_display(data[k+1].diff,data[k+1].dist*16/data[k].speed_google), weight: 6}).addTo(mymap);
 
               

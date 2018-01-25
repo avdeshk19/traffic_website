@@ -291,8 +291,9 @@ def read_data():
 						final += c
 
 				# print(final)
-				return render_template('traffic.html', result  = final)	# while(i<max_rows)
-
+				jsonStr1 = json.dumps(final)
+				return render_template('traffic.html', result  = jsonStr1)
+				# return render_template('traffic.html', result  = final)
 
 		# print(date)
 		# print(uproute)
