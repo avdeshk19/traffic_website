@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!--  <style>mapid { height: 180px; }</style> -->
+    <link rel="stylesheet" href="/static/leaflet.css" />
+    <link rel="stylesheet" href="/static/style.css" />
+
+  </head>
+  <body>
+    <center>
+      <div id="mapid">
+        <!-- <h1>whyy</h1> -->
+      </div>
+    </center>
+    <div id="date">
+    <form action="http://localhost:5000/traffic/map" method = 'post'>
+      <input type="date" id = "something" name="date" value = "2017-10-31">
+      <input type = "submit" value = "Submit" id="val">
+      <div id="updown">
+        <select id = "up_route" name="uproute">
+          <option value="0">Up-Route</option>
+          <option value="1">Up-Route 1</option>
+          <option value="2">Up-Route 2</option>
+          <option value="3">Up-Route 3</option>
+          <option value="4">Up-Route 4</option>
+        </select>
+        <select id = "down_route" name = "downroute">
+          <option value="0">Down-Route</option>
+          <option value="1">Down-Route 1</option>
+          <option value="2">Down-Route 2</option>
+          <option value="3">Down-Route 3</option>
+          <option value="4">Down-Route 4</option>
+        </select>
+      </div>
+      </form>      
+      <div id = "routes">
+        <h1> Bus Routes</h1>
+        <script>
+           
+        var data = "{{result}}";
+        </script>
+        <!-- {{result}} -->
+        <a href="#">419: Ambedkar Nagar-Old Delhi Railway Station</a>
+      </div>
+    </div>
+  
+    <div id="report">
+      <center><h1> Description</h1></center>
+      <p><b>UP route - From Ambedkar Nagar to Old Delhi Railway Station.<br>Down route - From Old Delhi Railway Station to Ambedkar Nagar.</b><br><br>The colour of the lines joining two bus stops varies as follows :<br><b>Green</b>: Time taken by the bus is less than the expected time as per Google API.<br><b>Yellow</b>: The bus is slower by at max 5 minutes.<br><b>Red</b>: The bus is slower by time in between 5 and 10 minutes.<br><b>Brown</b>: The bus is slower by time more than 10 minutes.<br><b>Click on the markers and Polylines to get detailed information</b><h4><a href="#">Report Card for selected route</a> <br><br> <a href="#">Weekly Report Card</a></h4></p>
+    </div>  
+    <!-- <div id="note">
+      <p><b>Please refresh the page before selecting a route in order to remove the already marked locations.</b></p>
+    </div> -->
+ 
+  <script src="/static/jquery.js"></script>
+  <script src="/static/leaflet.js"></script>
+    <script src="/static/jszip.js"></script> 
+    <script src="/static/myjs.js"></script> 
+
+  </body>
+  </body>
+</html>
+

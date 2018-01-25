@@ -1,0 +1,42 @@
+    #mapid { 
+      height: 600px; 
+      width: 50%;
+      position: relative;
+      bottom: 0;
+      top: 80px;
+      left: 0px;
+      margin-bottom: 5px;
+      border: solid;
+    }
+    #updown{
+      position: fixed;
+      top: 30px;
+      left: 60%;
+      margin-right: 50px;
+    }
+    #date{
+      position: fixed;
+      width: 30%;
+      top: 30px;
+      left: 27%;
+    }
+    #routes{
+      position: fixed;
+      left: 2.5%;
+      top: 80px;
+      width: 15%;
+    }
+    #report{
+      width: 22%;
+      position: absolute;
+      right: 5px;
+      top: 100px;
+   }
+    #note{
+      position: absolute;
+      width: 20%;
+      top:550px;
+      left:2.5%;
+      right: 1050px;
+    }
+
